@@ -132,7 +132,8 @@ input{
 #incomeError{
   font-size: 1.1rem;
   text-decoration: underline;
-  color: #ff0000;
+  color: #ed1c24;
   display: none;
   margin-top: .1rem;
+  margin-left: 6rem;
 }
