@@ -9,7 +9,10 @@ document.getElementById('calculateButton').addEventListener('click', function(){
 
   // error handling
   if(isNaN(parseFloat(incomeInput.value)) || parseFloat(incomeInput.value) <= 0){
-    incomeInput.value = 'please type number, minimum 1';
+    document.getElementById('incomeError').style.display = 'block'
+  }
+  else{
+    document.getElementById('incomeError').style.display = 'none'
   }
 
   const totalExpenses = parseFloat(foodInput.value) + parseFloat(rentInput.value) + parseFloat(clothesInput.value);

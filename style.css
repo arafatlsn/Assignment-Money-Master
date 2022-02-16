@@ -127,3 +127,12 @@ input{
   text-align: center;
   font-size: 1.6rem;
 }
+
+/* error handling */
+#incomeError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ff0000;
+  display: none;
+  margin-top: .1rem;
+}
