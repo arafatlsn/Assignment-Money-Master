@@ -29,7 +29,7 @@ header{
   grid-gap: 3rem;
 }
 .grid-column-two{
-  padding: 2rem 0;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +84,46 @@ input{
   font-size: 1.3rem;
   border-radius: .4rem;
   font-weight: 700;
-  color: #1e90ff;
+  color: #0000cd;
   background-color: #ffffe0;
+}
+/* calculate result */
+#totalExpense{
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: .7rem;
+}
+#balance{
+  text-align: center;
+  font-size: 1.8rem;
+}
 
+/* saving field  */
+.saving-field{
+  padding-top: 2rem;
+}
+#savingInput{
+  padding: .7rem 0;
+  width: 5rem;
+}
+#percantageSign{
+  font-size: 1.7rem;
+}
+#saveButton{
+  padding: .6rem 2rem;
+  font-size: 1.3rem;
+  border-radius: .4rem;
+  font-weight: 700;
+  color: #0000cd;
+  background-color: #ffffe0;
+}
+#savingAmountText{
+  text-align: center;
+  margin-top: 1rem;
+  padding: .3rem 0;
+  font-size: 1.6rem;
+}
+#remainingText{
+  text-align: center;
+  font-size: 1.6rem;
 }
