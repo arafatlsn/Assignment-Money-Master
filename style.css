@@ -103,8 +103,8 @@ input{
   padding-top: 2rem;
 }
 #savingInput{
-  padding: .7rem 0;
-  width: 5rem;
+  padding: .7rem 1rem;
+  width: 4rem;
 }
 #percantageSign{
   font-size: 1.7rem;
