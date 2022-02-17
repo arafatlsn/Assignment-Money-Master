@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="images/Money_-_Pictures_of_Money--Flickr_flickr.com--photos--pictures-of-money--17123251389.jpg" type="image/x-icon">
   <!-- css link -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile-responsive.css">
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,13 +63,15 @@
         <div>
           <h2 id="totalExpense">Total Expenses : <span id="totalExpensesInner">00</span></h2>
           <h2 id="balance">Balance: <span id="balanceInner">00</span></h2>
+          <p id="insufficientSavinError">Your Balance Insufficient For <span id="insufficientSavinErrorInner"></span> savings</p>
         </div>
         <div class="saving-field">
           <div>
             <label for="saveFor">Save:</label>
             <input id="savingInput" type="text" name="saveFor" id="saveFor" value="10">
             <span id="percantageSign">%</span>
-            <button id="saveButton" type="submit">Save</button>
+            <button id="saveButton" type="submit" disabled>Save</button>
+            <p id="savingError">please type number, minimum 1</p>
           </div>
           <div>
             <h2 id="savingAmountText">Saving Amount: <span id="savingInner">000</span></h2>

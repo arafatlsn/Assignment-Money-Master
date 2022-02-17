@@ -68,6 +68,8 @@ document.getElementById('calculateButton').addEventListener('click', function(){
   }
   showTotalExpenses.innerText = totalExpenses.toFixed(2);
   showBalance.innerText =  (parseFloat(incomeInput.value) - totalExpenses).toFixed(2);
+  // enable save button 
+  document.getElementById('saveButton').removeAttribute('disabled', true);
 })
 
 // catch save button 
@@ -79,6 +81,27 @@ document.getElementById('saveButton').addEventListener('click', function(){
   const showRemaining =document.getElementById('remainingInner');
 
   const getSavingAmount = parseFloat(incomeInput.value) * (parseFloat(savingInput.value) / 100);
+
+  // saving  error 
+  if(parseFloat(showBalance.innerText) < getSavingAmount){
+    showSaving.innerText = '';
+    showRemaining.innerText = '';
+    document.getElementById('insufficientSavinError').style.display = 'block';
+    return;
+  }
+  else{
+    document.getElementById('insufficientSavinError').style.display = 'none';
+  }
+  if(isNaN(savingInput.value) || savingInput.value <= 0 || savingInput.value == ''){
+    document.getElementById('savingError').style.display = 'block';
+
+    showSaving.innerText = '';
+    showRemaining.innerText = '';
+    return
+  }
+  else{
+    document.getElementById('savingError').style.display = 'none';
+  }
 
   showSaving.innerText = getSavingAmount.toFixed(2);
   showRemaining.innerText = (parseFloat(showBalance.innerText) - parseFloat(getSavingAmount)).toFixed(2)

@@ -169,3 +169,18 @@ input{
   margin-top: .1rem;
   margin-left: 6rem;
 }
+#savingError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ed1c24;
+  display: none;
+  margin-top: .1rem;
+  margin-left: 4rem;
+}
+#insufficientSavinError{
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: #ed1c24;
+  display: none;
+  margin-top: .1rem;
+}
