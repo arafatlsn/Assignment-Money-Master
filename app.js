@@ -8,6 +8,7 @@ document.getElementById('calculateButton').addEventListener('click', function(){
   const showBalance = document.getElementById('balanceInner');
 
   // error handling
+  // income 
   if(isNaN(incomeInput.value) || incomeInput.value <= 0 || incomeInput.value == ''){
     document.getElementById('incomeError').style.display = 'block'
     return
@@ -15,10 +16,55 @@ document.getElementById('calculateButton').addEventListener('click', function(){
   else{
     document.getElementById('incomeError').style.display = 'none'
   }
-
+  // food 
+  if(isNaN(foodInput.value) == false  && foodInput.value >= 0 || foodInput.value == ''){
+    document.getElementById('foodError').style.display = 'none';
+    if(foodInput.value == ''){
+      foodInput.value = 0;
+    }
+  }
+  else if(isNaN(foodInput.value) || foodInput.value < 0){
+    document.getElementById('foodError').style.display = 'block';
+    showTotalExpenses.innerText = '';
+    showBalance.innerText = '';
+    return
+  }
+  // rent 
+  if(isNaN(rentInput.value) == false && rentInput.value >= 0 || rentInput.value == ''){
+    document.getElementById('rentError').style.display = 'none';
+    if(rentInput.value == ''){
+      rentInput.value = 0;
+    }
+  }
+  else if(isNaN(rentInput.value) || rentInput.value < 0){
+    document.getElementById('rentError').style.display = 'block';
+    showTotalExpenses.innerText = '';
+    showBalance.innerText = '';
+    return
+  }
+  // clothes 
+  if(isNaN(clothesInput.value) == false  && clothesInput.value >= 0 || clothesInput.value == ''){
+    document.getElementById('clothesError').style.display = 'none';
+    if(clothesInput.value == ''){
+      clothesInput.value = 0;
+    }
+  }
+  else if(isNaN(clothesInput.value) || clothesInput.value < 0){
+    document.getElementById('clothesError').style.display = 'block';
+    showTotalExpenses.innerText = '';
+    showBalance.innerText = '';
+    return
+  }
+  // total & balance calculation 
   const totalExpenses = parseFloat(foodInput.value) + parseFloat(rentInput.value) + parseFloat(clothesInput.value);
-  if(totalExpenses > parseFloat(incomeInput.value)){
-    alert('your expense over your income. are you kidding me')
+  if(totalExpenses > incomeInput.value){
+    document.getElementById('incomeSmallError').style.display = 'block';
+    showTotalExpenses.innerText = '';
+    showBalance.innerText = '';
+    return
+  }
+  else{
+    document.getElementById('incomeSmallError').style.display = 'none';
   }
   showTotalExpenses.innerText = totalExpenses.toFixed(2);
   showBalance.innerText =  (parseFloat(incomeInput.value) - totalExpenses).toFixed(2);

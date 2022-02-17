@@ -32,6 +32,7 @@
           <label for="incomeAmount">Income:</label>
           <input class="top-input-field" type="text" name="incomeAmount" id="incomeAmount">
           <p id="incomeError">please type number, minimum 1</p>
+          <p id="incomeSmallError">Your income Small than your Expense</p>
         </div>
         <!-- spending amount  -->
         <div class="spending-class">
@@ -40,16 +41,19 @@
           <div class="food-div spending-div">
             <label for="foodFor">Food:</label>
             <input class="top-input-field" type="text" name="foodFor" id="foodFor">
+            <p id="foodError">please type number, minimum 0</p>
           </div>
           <!-- rent for  -->
           <div class="rent-div spending-div">
             <label for="rentFor">Rent:</label>
             <input class="top-input-field" type="text" name="rentFor" id="rentFor">
+            <p id="rentError">please type number, minimum 0</p>
           </div>
           <!-- clothes for  -->
           <div class="clothes-div spending-div">
             <label for="clothesFor">Clothes:</label>
             <input class="top-input-field" type="text" name="clothesFor" id="clothesFor">
+            <p id="clothesError">please type number, minimum 0</p>
           </div>
           <div class="calculate-div">
             <button id="calculateButton" type="submit">Calculate</button>
